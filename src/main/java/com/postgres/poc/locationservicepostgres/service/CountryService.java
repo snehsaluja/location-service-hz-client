@@ -36,7 +36,7 @@ public class CountryService {
     public CountryDTO getCountry(String code) throws NotFoundException {
         IMap<String, Country> iMap = hazelcastInstance.getMap("Country");
         Country country = iMap.get(code);
-        log.info("Values in map =>>>> ");
+        //log.info("Values in map =>>>> ");
         /*for (Map.Entry<String, Country> entry : iMap.entrySet()) {
             System.out.println("{\"code\": \""+entry.getKey()+"\"},");
         }*/
